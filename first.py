@@ -4,9 +4,6 @@ from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-import sys
-print sys.getdefaultencoding()
-
 
 @pytest.fixture
 def driver(request):
