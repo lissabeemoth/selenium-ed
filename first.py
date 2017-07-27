@@ -7,8 +7,9 @@ from selenium.webdriver.support import expected_conditions as EC
 
 @pytest.fixture
 def driver(request):
-    # wd = webdriver.Firefox(firefox_binary="/Applications/Firefox.app")
-    wd = webdriver.Chrome()
+    wd = webdriver.Firefox()
+    #wd = webdriver.Chrome()
+    #firefox_binary="/Applications/Firefox.app"
     print(wd.capabilities)
     request.addfinalizer(wd.quit)
     return wd

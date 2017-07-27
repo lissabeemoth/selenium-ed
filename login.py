@@ -8,7 +8,10 @@ from selenium.webdriver.support import expected_conditions as EC
 @pytest.fixture
 def driver(request):
     # wd = webdriver.Firefox(firefox_binary="/Applications/Firefox.app")
-    wd = webdriver.Chrome()
+    #wd = webdriver.Chrome(executable_path="")
+    #wd = webdriver.Firefox()
+    # wd = webdriver.Firefox(firefox_binary="/Applications/Firefox2.app", capabilities={"marionette": False})
+    wd = webdriver.Firefox(firefox_binary="/Applications/FirefoxNightly.app/Contents/MacOS/firefox")
     print(wd.capabilities)
     request.addfinalizer(wd.quit)
     return wd
