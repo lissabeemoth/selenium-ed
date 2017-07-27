@@ -36,6 +36,5 @@ def test_example(driver):
         if current:
             current.click()
             driver.find_element(By.TAG_NAME, "h1")
-
         else:
             cursor = False
