@@ -22,6 +22,7 @@ def driver(request):
 def test_first(driver):
     countries = []
     zones_urls = []
+    print '============================================================'
 
     driver.get("http://localhost/litecart/admin/?app=countries&doc=countries")
 
